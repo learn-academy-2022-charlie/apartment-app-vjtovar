@@ -15,6 +15,7 @@ class Header extends Component {
     console.log("current_user:", current_user)
     return (
       <>
+      <header>
         <h1>Header</h1>
         <Nav className="header-links">
           <NavItem>
@@ -41,7 +42,14 @@ class Header extends Component {
             < NavItem>
               <NavLink to="/apartmentnew" className="nav-link">ApartmentNew</NavLink>
             </NavItem>
+
+          {!logged_in &&
+            < NavItem>
+              <NavLink to="/myapartments" className="nav-link">My Apartments</NavLink>
+            </NavItem>
+          }
         </Nav>
+        </header>
       </>
     )
   }

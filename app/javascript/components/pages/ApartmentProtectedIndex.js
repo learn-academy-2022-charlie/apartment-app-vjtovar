@@ -35,7 +35,10 @@ export default class ApartmentIndex extends Component {
                   <CardText>{apartment.bathrooms}</CardText>
                   <CardText>{apartment.pets}</CardText>
                   <NavLink to={`/apartmentshow/${apartment.id}`}>
-                  <Button>Click for details</Button>
+                    <div className="button-container">
+                  <Button>Edit</Button>
+                  <Button>Delete</Button>
+                  </div>
                   </NavLink>
                 </CardBody>
               </Card>
