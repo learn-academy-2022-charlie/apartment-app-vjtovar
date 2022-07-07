@@ -13,7 +13,7 @@ import ApartmentIndex from './ApartmentIndex'
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({ adapter: new Adapter() })
 
-describe("When ApartmentIndex renders", () => {
+describe("When ApartmentProtectedIndex renders", () => {
   const props = {
     apartments: [
       {
@@ -30,16 +30,16 @@ describe("When ApartmentIndex renders", () => {
         user_id: 1 }
     ]
   }
-  let apartmentIndexRender
+  let apartmentProIndexRender
   beforeEach(() => {
-    apartmentIndexRender = shallow(<ApartmentIndex {...props} />)
+    apartmentProIndexRender = shallow(<ApartmentProtectedIndex {...props} />)
   })
   it("displays a heading", () => {
-    const apartmentIndexHeading = apartmentIndexRender.find("h3")
-    expect(apartmentIndexHeading.length).toEqual(1)
+    const apartmentProIndexHeading = apartmentProIndexRender.find("h3")
+    expect(apartmentProIndexHeading.length).toEqual(1)
   })
   it("displays a card from ReactStrap per apartment ", () => {
-    const apartmentIndexCard = apartmentIndexRender.find("Card")
-    expect(apartmentIndexCard.length).toEqual(1)
+    const apartmentProIndexCard = apartmentProIndexRender.find("Card")
+    expect(apartmentProIndexCard.length).toEqual(1)
   })
 })

@@ -17,39 +17,110 @@
 
 
 
-// Global
-a {
-    text-decoration: none;
-    padding: 80px 0;
+// -------Global--------
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'copperplate';
     text-align: center;
   }
-  
-//   .page-content {
-//     padding: 80px 0;
+  .page-body {
+    text-align: center;
+    margin: 3rem;
+    min-height: calc(100vh - 34px);
+  }
+
+// ------HEADER-------
+header {
+    background-color: #c0bdbb;
+    display: flex;
+    justify-content: space-between;
+  }
+//   .apartment-logo {
+//     width: 150px;
+//     margin-left: 20px;
 //   }
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-right: 50px;
+  }
+
+// ------HOME-------
+
+
+// -------INDEX---------
+.index-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center; 
+    
+  }
   
-//   .center {
+  .card-image {
+    width: 300px;
+    background-color: #FFFEF1;
+    margin: 20px;
+     
+
+  }
+//   .btn.btn-secondary {
+//     background-color: #2b00ff;
+//     font-weight: bolder;
+//   }
+  .btn.btn-secondary:hover {
+    color: #0400ff;
+    background-color: white;
+  }
+
+// ----------SHOW--------
+// .card-show.card.card-body {
+//     margin: 0 auto;
+//   }
+
+//   ------FORMS------
+// form {
+//     margin-left: 20%;
+//     margin-right: 20%;
+//   }
+//   input {
 //     text-align: center;
 //   }
 
-// ------HOME-------
-.homeHeader {
-    display: flex;
-    text-align: center;
-    color:black;
-}
+// ---------FOOTER------
+// footer {
+//     font-size: 20px;
+//     position: sticky;
+//     margin: auto;
+//     width: 100%;
+//     height: auto;
+//     background-color: #FFFEF1;
+//     display: flex;
+//     justify-content: space-around;
+//   }
+//   a {
+//     color: #FF0080 !important;
+//     text-decoration: none !important;
+//     margin: auto;
+//   }
+//   a:hover {
+//     cursor: pointer !important;
+//     color: #FF0080 !important;
+//     text-decoration: underline !important;
+//   }
 
-.homeText {
-    display: flex;
-    justify-content: content;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-}
 
-.homeImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
+// --------NOT FOUND-------
+// .cat-friend {
+//     width: 400px;
+//     border: 1px solid black;
+//     border-radius: 10px;
+//   }
+
+
+// Nav{
+//     display: flex;
+//     justify-content: space-around;
+//   }
