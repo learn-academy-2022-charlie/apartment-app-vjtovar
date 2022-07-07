@@ -23,8 +23,6 @@ export default class ApartmentIndex extends Component {
         <div className="index-cards">
           {apartments && apartments.map((apartment, index)=> {
             return ( 
-            // <Row key={apartment.id}>
-            //   <Col sm="6">
               <Card key={index}>
                 <CardImg className="card-image" top width="100%" src={apartment.image} alt="Card image cap" />
                 <CardBody>
@@ -44,8 +42,6 @@ export default class ApartmentIndex extends Component {
                   </NavLink>
                 </CardBody>
               </Card>
-              // </Col>
-              // </Row>
             )})
           }
           </div>

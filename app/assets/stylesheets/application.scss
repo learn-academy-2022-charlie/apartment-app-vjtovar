@@ -30,16 +30,15 @@
     min-height: calc(100vh - 34px);
   }
 
+
+
 // ------HEADER-------
-header {
+  header {
     background-color: #c0bdbb;
     display: flex;
     justify-content: space-between;
   }
-//   .apartment-logo {
-//     width: 150px;
-//     margin-left: 20px;
-//   }
+
   .nav-link {
     display: flex;
     flex-direction: row;
@@ -47,11 +46,14 @@ header {
     padding-right: 50px;
   }
 
+
 // ------HOME-------
 
 
+
+
 // -------INDEX---------
-.index-cards {
+  .index-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -63,64 +65,4 @@ header {
     width: 300px;
     background-color: #FFFEF1;
     margin: 20px;
-     
-
   }
-//   .btn.btn-secondary {
-//     background-color: #2b00ff;
-//     font-weight: bolder;
-//   }
-  .btn.btn-secondary:hover {
-    color: #0400ff;
-    background-color: white;
-  }
-
-// ----------SHOW--------
-// .card-show.card.card-body {
-//     margin: 0 auto;
-//   }
-
-//   ------FORMS------
-// form {
-//     margin-left: 20%;
-//     margin-right: 20%;
-//   }
-//   input {
-//     text-align: center;
-//   }
-
-// ---------FOOTER------
-// footer {
-//     font-size: 20px;
-//     position: sticky;
-//     margin: auto;
-//     width: 100%;
-//     height: auto;
-//     background-color: #FFFEF1;
-//     display: flex;
-//     justify-content: space-around;
-//   }
-//   a {
-//     color: #FF0080 !important;
-//     text-decoration: none !important;
-//     margin: auto;
-//   }
-//   a:hover {
-//     cursor: pointer !important;
-//     color: #FF0080 !important;
-//     text-decoration: underline !important;
-//   }
-
-
-// --------NOT FOUND-------
-// .cat-friend {
-//     width: 400px;
-//     border: 1px solid black;
-//     border-radius: 10px;
-//   }
-
-
-// Nav{
-//     display: flex;
-//     justify-content: space-around;
-//   }
