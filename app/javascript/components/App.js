@@ -7,6 +7,7 @@ import ApartmentShow from './pages/ApartmentShow'
 import ApartmentNew from './pages/ApartmentNew'
 import ApartmentEdit from './pages/ApartmentEdit'
 import NotFound from './pages/NotFound'
+import ApartmentProtectedIndex from './pages/ApartmentProtectedIndex'
 
 import {
   BrowserRouter as Router,
@@ -44,19 +45,20 @@ class App extends Component {
     .catch(errors => console.log("Apartment read errors:", errors))
   }
   render() {
-    const { current_user }
+    const { current_user } = this.props
     return (
       
         <Router>
           <Header {...this.props} />
           <Switch>
-            <Route exact path="/" render={Home} />
-            <Route path="/apartmentindex" render={props => <ApartmentIndex apartments={this.state.apartments}/> }/>
-            <Route path="/myapartments" render={props => {
-              let myApartments = this.state.apartments.filter(apart => apart.user_id === current_user.id)
-               <ApartmentProtectedIndex apartments = { myApartments } />
-            }}/>
-
+            <Route exact path="/" component={Home} />
+            <Route path="/apartmentindex" render={props => 
+            <ApartmentIndex apartments={this.state.apartments}/> }/>
+            
+            <Route path="/apartmentprotectedindex" render={props => {
+              let myApartments = this.state.apartments.filter(apart => apart.user_id == current_user.id)
+              return <ApartmentProtectedIndex apartments={ myApartments } />
+            }} />
             <Route path="/apartmentshow/:id" render= {(props) => {
               let id = props.match.params.id
               let apartment = this.state.apartments.find((apartmentObject)=> apartmentObject.id == id)

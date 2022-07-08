@@ -7,11 +7,10 @@ import {
   CardTitle, 
   CardSubtitle, 
   Button,
-  Col
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
 
-export default class ApartmentIndex extends Component {
+export default class ApartmentProtectedIndex extends Component {
   render() {
     const { apartments } = this.props
     console.log("props.apartments:", apartments);
@@ -19,7 +18,7 @@ export default class ApartmentIndex extends Component {
       <>
         
         <div className="page-body">
-        <h3>Apartment Listing</h3>
+        <h3>My Apartments</h3>
         <div className="index-cards">
           {apartments && apartments.map((apartment, index)=> {
             return ( 
@@ -34,12 +33,10 @@ export default class ApartmentIndex extends Component {
                   <CardText>{apartment.bedrooms}</CardText>
                   <CardText>{apartment.bathrooms}</CardText>
                   <CardText>{apartment.pets}</CardText>
-                  <NavLink to={`/apartmentshow/${apartment.id}`}>
-                    <div className="button-container">
-                  <Button>Edit</Button>
-                  <Button>Delete</Button>
+                  <div className="button-container">
+                    <Button>Edit</Button>
+                    <Button>Delete</Button>
                   </div>
-                  </NavLink>
                 </CardBody>
               </Card>
             )})

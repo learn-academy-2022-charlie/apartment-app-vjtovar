@@ -16,7 +16,7 @@ class Header extends Component {
     return (
       <>
       <header>
-        <h1>Header</h1>
+        <h2>Perfect Place</h2>
         <Nav className="header-links">
           <NavItem>
             <NavLink to="/" className="nav-link">Home</NavLink>
@@ -36,9 +36,17 @@ class Header extends Component {
               <a href={new_user_route} className="nav-link">Sign Up</a>
             </NavItem>
           }
+          {logged_in &&
+          < NavItem>
+            <NavLink to="/apartmentprotectedindex" className="nav-link">Apartment Listing</NavLink>
+          </NavItem>
+          }
+          {!logged_in &&
             < NavItem>
               <NavLink to="/apartmentindex" className="nav-link">Apartment Listing</NavLink>
             </NavItem>
+          }
+          
             < NavItem>
               <NavLink to="/apartmentnew" className="nav-link">ApartmentNew</NavLink>
             </NavItem>
