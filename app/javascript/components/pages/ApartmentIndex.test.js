@@ -40,6 +40,6 @@ describe("When ApartmentIndex renders", () => {
   })
   it("displays a card from ReactStrap per apartment ", () => {
     const apartmentIndexCard = apartmentIndexRender.find("Card")
-    expect(apartmentIndexCard.length).toEqual(1)
+    expect(apartmentIndexCard.length).toEqual(6)
   })
 })
